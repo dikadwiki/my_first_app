@@ -42,14 +42,14 @@ class MainScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Welcome',
+                          'Selamat Datang',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: Theme.of(context).colorScheme.outline),
                         ),
                         Text(
-                          "Dwiki N",
+                          "Dwiki Noviandika",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -84,7 +84,7 @@ class MainScreen extends StatelessWidget {
                     BoxShadow(
                         blurRadius: 5,
                         color: Colors.grey.shade400,
-                        offset: Offset(5, 5))
+                        offset: const Offset(5, 5))
                   ]),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -166,7 +166,7 @@ class MainScreen extends StatelessWidget {
                               child: const Center(
                                   child: Icon(
                                 CupertinoIcons.arrow_up,
-                                color: Colors.red,
+                                color: Color.fromARGB(255, 255, 17, 0),
                                 size: 12,
                               )),
                             ),
@@ -201,6 +201,30 @@ class MainScreen extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Transaksi',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Theme.of(context).colorScheme.onBackground,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'Lihat Semua',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Theme.of(context).colorScheme.onBackground,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
             )
           ],
         ),
