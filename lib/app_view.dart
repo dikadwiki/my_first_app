@@ -17,6 +17,7 @@ class MyAppView extends StatelessWidget {
           tertiary: Color(0xFFFF8D6C),
         ),
       ),
+      home: HomeScreen(),
     );
   }
 }
