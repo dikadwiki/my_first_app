@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:expenses_tracker/data/data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -260,10 +259,11 @@ class MainScreen extends StatelessWidget {
                                         shape: BoxShape.circle,
                                       ),
                                     ),
-                                    Icon(
-                                      Icons.food_bank,
-                                      color: Colors.white,
-                                    ),
+                                    dataTransaksi[i]['icon']
+                                    // Icon(
+                                    // dataTransaksi[i]['icon'],
+                                    // color: Colors.white,
+                                    // ),
                                   ],
                                 ),
                                 SizedBox(width: 12),
