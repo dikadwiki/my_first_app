@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:expenses_tracker/data/data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -232,17 +233,17 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
-                itemCount: 3,
+                itemCount: dataTransaksi.length,
                 itemBuilder: (context, int i) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 16.0),
+                    padding: const EdgeInsets.only(bottom: 14.0),
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: const EdgeInsets.all(14.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -255,7 +256,7 @@ class MainScreen extends StatelessWidget {
                                       width: 50,
                                       height: 50,
                                       decoration: BoxDecoration(
-                                        color: Colors.red,
+                                        color: dataTransaksi[i]['warna'],
                                         shape: BoxShape.circle,
                                       ),
                                     ),
@@ -267,7 +268,7 @@ class MainScreen extends StatelessWidget {
                                 ),
                                 SizedBox(width: 12),
                                 Text(
-                                  'Makan',
+                                  dataTransaksi[i]['nama'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context)
@@ -281,7 +282,7 @@ class MainScreen extends StatelessWidget {
                             Column(
                               children: [
                                 Text(
-                                  '- Rp 55000',
+                                  dataTransaksi[i]['jumlah'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context)
@@ -291,7 +292,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  'Hari Ini',
+                                  dataTransaksi[i]['tanggal'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color:
