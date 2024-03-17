@@ -212,16 +212,16 @@ class MainScreen extends StatelessWidget {
                   'Transaksi',
                   style: TextStyle(
                     fontSize: 14,
-                    color: Theme.of(context).colorScheme.onBackground,
-                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.outline,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 Text(
                   'Lihat Semua',
                   style: TextStyle(
                     fontSize: 14,
-                    color: Theme.of(context).colorScheme.onBackground,
-                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.outline,
+                    fontWeight: FontWeight.w400,
                   ),
                 )
               ],
