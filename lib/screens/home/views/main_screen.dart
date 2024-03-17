@@ -203,7 +203,7 @@ class MainScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -211,20 +211,55 @@ class MainScreen extends StatelessWidget {
                 Text(
                   'Transaksi',
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Theme.of(context).colorScheme.outline,
-                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: Theme.of(context).colorScheme.onBackground,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
-                  'Lihat Semua',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Theme.of(context).colorScheme.outline,
-                    fontWeight: FontWeight.w400,
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Lihat Semua',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Theme.of(context).colorScheme.outline,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 )
               ],
+            ),
+            const SizedBox(height: 20),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, int i) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                shape: BoxShape.circle,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),
